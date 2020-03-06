@@ -1,42 +1,57 @@
 [
     {
       "winner": ["Bruno", "Charles", "Milton", "Rafael", "Samuel"],
-      "loser": ["Bauer", "Erasmo", "Longaray", "Pedro", "Sandro"]
+      "loser": ["Bauer", "Erasmo", "Longaray", "Pedro", "Sandro"],
+      "score": [17, 13]
     },
     {
       "winner": ["Arthur", "Bruno", "Erasmo", "Gabriel", "Leonardo", "Araujo", "Samuel", "Sandro"],
-      "loser": ["Bauer", "Charles", "Bob", "Junior", "Longaray", "Marcelo", "Mauricio", "Paulo"]
+      "loser": ["Bauer", "Charles", "Bob", "Junior", "Longaray", "Marcelo", "Mauricio", "Paulo"],
+      "score": [6, 3]
     },
     {
       "winner": ["Arthur", "Braian", "Bauer", "Bruno", "Gabriel", "Leonardo", "Milton", "Pedro"],
-      "loser": ["Alexandre", "Cesar", "Erasmo", "Longaray", "Marcelo", "Martim", "Sandro", "Tanauan"]
+      "loser": ["Alexandre", "Cesar", "Erasmo", "Longaray", "Marcelo", "Martim", "Sandro", "Tanauan"],
+      "score": [9, 8]
     },
     {
       "winner": ["Erasmo", "Bob", "Leonardo", "Longaray", "Menna", "Prola", "Rodrigo", "Sandro"],
-      "loser": ["Alexandre", "Breno", "Charles", "Felipe", "Tagliaro", "Rosso", "Samuel", "Tanauan"]
+      "loser": ["Alexandre", "Breno", "Charles", "Felipe", "Tagliaro", "Rosso", "Samuel", "Tanauan"],
+      "score": [9, 8]
     },
     {
       "winner": ["Alexandre", "Arthur", "Bruno", "Erasmo", "Longaray", "Rodrigo", "Samuel", "Sandro"],
-      "loser": ["Braian", "Breno", "Felipe", "Bob", "Tagliaro", "Leonardo", "Araujo", "Prola"]
+      "loser": ["Braian", "Breno", "Felipe", "Bob", "Tagliaro", "Leonardo", "Araujo", "Prola"],
+      "score": [8, 5]
     },
     {
       "winner": ["Alexandre", "Bob", "Bruno", "Tagliaro", "Leonardo", "Mior", "Prola", "Rosso"],
-      "loser": ["Breno", "Erasmo", "Fabio", "Felipe", "Longaray", "Rodrigo", "Samuel", "Viegas"]
+      "loser": ["Breno", "Erasmo", "Fabio", "Felipe", "Longaray", "Rodrigo", "Samuel", "Viegas"],
+      "score": [9, 6]
     },
     {
       "winner": ["Alexandre", "Bruno", "Erasmo", "Leonardo", "Prola", "Rafael", "Samuel", "Sandro"],
-      "loser": ["Arthur", "Braian", "Breno", "Fabio", "Bob", "Tagliaro", "Longaray", "Rosso"]
+      "loser": ["Arthur", "Braian", "Breno", "Fabio", "Bob", "Tagliaro", "Longaray", "Rosso"],
+      "score": [5, 3]
     },
     {
       "winner": ["Breno", "Bruno", "Erasmo", "Leonardo", "Longaray", "Pedro", "Prola", "Rafael"],
-      "loser": ["Arthur", "Fabio", "Bob", "Tagliaro", "Araujo", "Rosso", "Samuel", "Tanauan"]
+      "loser": ["Arthur", "Fabio", "Bob", "Tagliaro", "Araujo", "Rosso", "Samuel", "Tanauan"],
+      "score": [6, 5]
     },
     {
       "winner": ["Breno", "Bruno", "Cesar", "Fabio", "Bob", "Joao", "Longaray", "Menna"],
-      "loser": ["Alexandre", "Julio", "Leonardo", "Pedro", "Prola", "Samuel", "Sandro", "Tanauan"]
+      "loser": ["Alexandre", "Julio", "Leonardo", "Pedro", "Prola", "Samuel", "Sandro", "Tanauan"],
+      "score": [7, 6]
     },
     {
       "winner": ["Alexandre", "Bruno", "Cesar", "Fabricio", "Leonardo", "Prola", "Sandro"],
-      "loser": ["Erasmo", "Julio", "Longaray", "Mateus", "Pedro", "Samuel", "Tanauan"]
+      "loser": ["Erasmo", "Julio", "Longaray", "Mateus", "Pedro", "Samuel", "Tanauan"],
+      "score": [7, 3]
+    },
+    {
+      "winner": ["Bruno", "Felipe", "Longaray", "Samuel", "Bauer", "Mateus", "Augusto", "Eloi"],
+      "loser": ["Prola", "Fabio", "Cesar", "Menna", "Sandro", "Rafael", "Junior", "Leonardo"],
+      "score": [10, 3]
     }
 ]

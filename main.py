@@ -51,7 +51,7 @@ if __name__ == "__main__":
     for game in games:
         winner = [[q for q in players if q.name == p][0] for p in game['winner']]
         loser = [[q for q in players if q.name == p][0] for p in game['loser']]
-        teams = Teams(winner, loser, 0)
+        teams = Teams(winner, loser, 0, game['score'])
         for p in winner:
             p.add_match_result(True)
         for p in loser:
@@ -65,12 +65,19 @@ if __name__ == "__main__":
     str_team = sort_by(teams, 'strength')
     bal_team = sort_by(teams, 'balance')
     teams, index = find_first_common(str_team, bal_team)
-    print("Next teams should be:")
-    print("TEAM A: %s" % ", ".join([p.name for p in teams.team_a]))
-    print("TEAM B: %s" % ", ".join([p.name for p in teams.team_b]))
-    print(index, str(teams))
+
     
     for p in sorted(players, key=lambda e:e.name):
         print("\n")
         print(p)
         print("      " + " ".join(sorted(["%s: %s" % (q.name, i) for q, i in p.players.items()])))
+
+    print("\n Current Rank \n")
+    for p in sorted(players, key=lambda e:e.hidden(), reverse=True):
+        name = p.name.ljust(15, ' ')
+        print("%s : %.2f" % (name, p.hidden()))
+
+    print("\nNext teams should be:")
+    print("TEAM A: %s" % ", ".join([p.name for p in teams.team_a]))
+    print("TEAM B: %s" % ", ".join([p.name for p in teams.team_b]))
+    print(index, str(teams))
