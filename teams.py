@@ -8,7 +8,8 @@ class Teams:
         self.index = index
         strngth = sum([p.hidden() for p in team_a]) - sum([p.hidden() for p in team_b])
         self.strength = abs(strngth)
-        self.adv = "A" if strngth > 0 else "B"
+        self.adv = "Azul" if strngth > 0 else "Vermelho"
+        self.result = "" if score is None else ("Azul" if score[0] > score[1] else ("Vermelho" if score[1] > score[0] else "Empate"))
         self.score = score
         self.balance = abs(sum([a.simulated_balance(team_a, team_b) for a in team_a]) +
                            sum([a.simulated_balance(team_b, team_a) for a in team_b]))
@@ -25,5 +26,17 @@ class Teams:
         return gk_a + gk_b < 2 or (gk_a >= 1 and gk_b >= 1)
 
     def __str__(self):
-        score_str = "" if self.score is None else "A %i x %i B" % (self.score[0], self.score[1])  
-        return "Teams balance %.2f --- strDelta: %.2f (%s) - %s" % (self.balance, self.strength, self.adv, score_str)
+        balance = ("%.2f" % self.balance).ljust(10, ' ')
+        strength = ("%.2f" % self.strength).ljust(10, ' ')
+        adv = ("%s" % self.adv).ljust(10, ' ')
+        blue_score = ("%i" % self.score[0] if self.score is not None else "").rjust(10, ' ')
+        red_score = ("%i" % self.score[1] if self.score is not None else "").ljust(10, ' ')
+        winner = ("%s" % self.result).rjust(10, ' ')
+        aa = ("%i" % sum([p.hv[0] for p in self.team_a])).rjust(4, ' ')
+        ad = ("%i" % sum([p.hv[1] for p in self.team_a])).rjust(4, ' ')
+        at = ("%i" % sum([p.hv[2] for p in self.team_a])).rjust(4, ' '  )
+        va = ("%i" % sum([p.hv[0] for p in self.team_b])).rjust(4, ' ')
+        vd = ("%i" % sum([p.hv[1] for p in self.team_b])).rjust(4, ' ')
+        vs = ("%i" % sum([p.hv[2] for p in self.team_b])).rjust(4, ' ')
+        total = ("%.2f" % ((sum([p.hidden() for p in self.team_a]) + sum([p.hidden() for p in self.team_b]))/(len(self.team_a)+len(self.team_b)))).ljust(10, ' ')
+        return "%s%s%s%s X %s%s %s%s%s%s%s%s  %s" %  (balance, strength, adv, blue_score, red_score, winner, aa, ad, at, va, vd, vs, total)

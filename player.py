@@ -27,15 +27,15 @@ class Player:
         return self.base() * (self.rate ** self.recent())
 
     def base(self):
-        return (self.hv[0] * 2 + self.hv[1] * 2 + self.hv[2]) / 5.0
+        return (self.hv[0] * 2 + self.hv[1] * 2 + self.hv[2] * 2) / 6.0
 
     def delta(self):
         return 100 * (self.hidden() - self.base()) / self.base()
 
     def recent(self):
-        return sum([1 if w else -1 for w in self.wins])
+        return sum(self.wins)
 
     def __str__(self):
         return "%s W-%i L-%i %.2f %.3f %.1f %%" % \
-               (self.name, len([x for x in self.wins if x]),
-                len([x for x in self.wins if not x]), self.base(), self.hidden(), self.delta())
+               (self.name, len([x for x in self.wins if x > 0]),
+                len([x for x in self.wins if x < 0]), self.base(), self.hidden(), self.delta())
